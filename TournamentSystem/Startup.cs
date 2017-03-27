@@ -48,7 +48,7 @@ namespace TournamentSystem
 
             services.AddMvc();
 
-            var connectionString = @"Server=tcp:pjb6orx222.database.windows.net,1433;Initial Catalog=TournamentSystem;Persist Security Info=False;User ID=mskutle;Password=1ptv&$hop!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            
             services.AddDbContext<TsContext>(options => options.UseSqlServer(connectionString));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();         
